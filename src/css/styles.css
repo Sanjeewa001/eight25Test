@@ -1,0 +1,432 @@
+/* Variables */
+:root {
+    --primary-color: #000743;
+    --secondary-color: #ffffff;
+    --accent-color: #FF3366;
+    --purple-color: #A86DB7;
+    --gold-color: #AD911A;
+}
+
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--primary-color);
+}
+
+/* Typography */
+h1 {
+    font-size: 60px;
+    font-family: 'DM Sans';
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+p {
+    font-size: 20px;
+    margin: 0 5%;
+    color: var(--primary-color);
+}
+
+/* Navigation */
+.main-nav {
+    background-color: var(--secondary-color);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 60px;
+    padding: 1rem;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header styles */
+.header-bg {
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    margin-top: 10%;
+   
+}
+
+.header-flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header-content {
+    margin-top: 60px;
+    flex: 0 0 40%;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+/* Grid layouts */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    padding: 15px;
+    margin-top: 30px;
+    grid-gap: 10px;
+    margin: 0 auto;
+}
+
+.grid-item1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2.4rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+                0 1px 3px rgba(0, 0, 0, 0.08);
+    width: 116px;
+    height: 117px;
+}
+
+.grid-image {  
+    width: 50%;
+    height: 50%;
+    
+}
+
+.side-grid {
+    flex: 0 0 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side-grid.left {
+    margin-right: auto;
+}
+
+.side-grid.right {
+    margin-left: auto;
+}
+
+/* Section backgrounds */
+.section-bg-1 {
+    background-image: url('../images/bg2.png');
+    background-size: cover;
+    height: 555px;
+    background-color: var(--primary-color);
+    position: relative;
+    background-color: #63017e;
+    box-shadow: none;
+}
+
+.section-bg-2 {
+    background-image: url('../images/bg2.png');
+    background-size: cover;
+   
+    min-height: 500px;
+    background-color: var(--secondary-color);
+    position: relative;
+    box-shadow: none;
+}
+
+.section-bg-3 {
+    background-image: url('../images/bg.png');
+    background-size: cover;
+    min-height: 500px;
+    background-color: var(--primary-color);
+    position: relative;
+    box-shadow: none;
+}
+
+.section-bg-3 h1 {
+    color: var(--secondary-color);
+}
+
+/* Buttons */
+.primaryBtn, .secondaryBtn {
+    padding: 13px 20px;
+    width: 248px;
+    font-size: 16px;
+    margin-top: 8%;
+    border-radius: 6px;
+    border: 0;
+    color: var(--secondary-color);
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.primaryBtn {
+    background-color: var(--accent-color);
+}
+
+.primaryBtn p {
+    display: none;
+}
+
+.secondaryBtn {
+    background-color: var(--purple-color);
+}
+
+/* Learning section */
+.learning-grid {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 2rem;
+    padding: 2rem;
+    align-items: center;
+}
+
+.learning-card {
+    background: var(--secondary-color);
+    border-radius: 20px;
+    padding: 2rem;
+    width: 320px;
+    height: 340px;
+    border: 10px solid rgba(255, 255, 255, 0.5);
+    margin-left: 10%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.star-rating {
+    font-size: 24px;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.star-rating .filled {
+    color: var(--gold-color);
+}
+
+.star-rating .empty {
+    color: #D3D3D3;
+}
+
+/* Custom Cursor */
+
+.cursor-follower {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background: rgba(68, 0, 113, 0.375);
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform .1s;
+    z-index: 9998;
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+}
+
+/* Hover effects for interactive elements */
+a:hover ~ .cursor,
+button:hover ~ .cursor {
+    transform: scale(1.5);
+}
+
+a:hover ~ .cursor-follower,
+button:hover ~ .cursor-follower {
+    transform: scale(1.3);
+}
+
+
+
+/* Ensure content stays above the background */
+.section-content,
+.section-content3 {
+    position: relative;
+    box-shadow: none;
+    background-color: transparent;
+    backdrop-filter: none;
+}
+
+/* Specific section content adjustments */
+.section-content {
+    padding-top: 120px;  
+}
+
+.section-content3 {
+    padding-top: 120px;
+    padding-left: 35%;
+    padding-right: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    background-color: var(--secondary-color);
+
+}
+
+/* Responsive */
+
+
+/* Split grid */
+.split-grid {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 2rem;
+    align-items: center;
+    max-width: 1200px;
+  
+}
+
+.text-content {
+    padding-right: 2rem;
+    color: var(--secondary-color);
+    margin-left: -120px;
+}
+
+.image-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -18%;
+}
+
+.section-image {
+    width:  auto;
+    height: 555px;
+}
+
+/* Section styles */
+section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.section-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    position: relative;
+    z-index: 2;
+    box-shadow: none;
+    background-color: transparent;
+    backdrop-filter: none;
+}
+
+/* Add these styles to fix color and layout issues */
+.heading2 {
+    color: var(--secondary-color);
+}
+
+/* Fix button alignment */
+.primaryBtn, .secondaryBtn {
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Fix empty paragraph in button */
+.primaryBtn p {
+    display: none;
+}
+
+/* Fix cursor initial state */
+.cursor, .cursor-follower {
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+}
+
+/* Fix section content vertical alignment */
+.section-content3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    box-shadow: none;
+    background-color: transparent;
+    backdrop-filter: none;
+}
+
+/* Fix grid spacing */
+.grid-container {
+    grid-gap: 10px;
+    margin: 0 auto;
+}
+
+/* Fix image aspect ratios */
+.grid-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Animation classes */
+.reveal {
+    position: relative;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.reveal.active {
+    opacity: 1;
+}
+
+.reveal.fade-bottom {
+    transform: translateY(20px);
+}
+
+.reveal.fade-bottom.active {
+    transform: translateY(0);
+}
+
+.reveal.fade-left {
+    transform: translateX(-100px);
+}
+
+.reveal.fade-left.active {
+    transform: translateX(0);
+}
+
+.reveal.fade-right {
+    transform: translateX(100px);
+}
+
+.reveal.fade-right.active {
+    transform: translateX(0);
+}
+
+/* Reset section shadows */
+.section-bg-1,
+.section-bg-2,
+.section-bg-3 {
+    box-shadow: none;
+}
+
+/* Reset section content shadows */
+.section-content,
+.section-content3 {
+    box-shadow: none;
+    background-color: transparent;
+    backdrop-filter: none;
+}
+
+/* Keep shadow only for learning card */
+.learning-card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: var(--secondary-color);
+}
+
+/* Remove any transition shadows */
+section::after {
+    display: none;
+}
