@@ -1,6 +1,6 @@
 # One Page Website
 
-This project is a one-page website that includes sections for a homepage, testimonial, contact, and a banner, each with a different background image.
+This project is a one-page website that includes sections for a hero section, testipromotion section, learning section, testimonial, each with a different background image.
 
 ## Project Structure
 
@@ -11,9 +11,9 @@ one-page-website
 │   ├── css
 │   │   └── styles.css      # CSS styles for layout and design
 │   └── js
-│       └── main.js         # JavaScript for interactivity
+│      └── main.js         # JavaScript for interactivity    
 ├── assets
-│   └── media               # Directory for background images
+│   └── media               #images
 ├── package.json            # npm configuration file
 └── README.md               # Project documentation
 ```
