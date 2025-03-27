@@ -123,7 +123,7 @@ p {
 
 /* Section backgrounds */
 .section-bg-1 {
-    background-image: url('../../assets/images/bg2.png');
+    background-image: url('../images/bg2.png');
     background-size: cover;
     height: 555px;
     background-color: var(--primary-color);
@@ -134,7 +134,7 @@ p {
 }
 
 .section-bg-2 {
-    background-image: url('../../assets/images/bg2.png');
+    background-image: url('../images/bg2.png');
     background-size: cover;
     min-height: 700px;
     background-color: var(--secondary-color);
@@ -144,7 +144,7 @@ p {
 }
 
 .section-bg-3 {
-    background-image: url('../../assets/images/bg.png');
+    background-image: url('../images/bg.png');
     background-size: cover;
     min-height: 500px;
     background-color: var(--primary-color);
@@ -158,21 +158,21 @@ p {
 
 /* Section Backgrounds */
 .primary-bg {
-    background-image: url('../../assets/images/bg2.png');
+    background-image: url('../images/bg2.png');
     background-size: cover;
     height: 100vh;
     background-color: #63017e;
 }
 
 .light-bg {
-    background-image: url('../../assets/images/bg2.png');
+    background-image: url('../images/bg2.png');
     background-size: cover;
     min-height: 100vh;
     background-color: var(--secondary-color);
 }
 
 .dark-bg {
-    background-image: url('../../assets/images/bg.png');
+    background-image: url('../images/bg.png');
     background-size: cover;
     min-height: 100vh;
     background-color: var(--primary-color);
